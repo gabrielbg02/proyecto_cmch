@@ -76,6 +76,7 @@ async def mostrar_formulario(request: Request):
 # Ruta para procesar el formulario
 @app.post("/data-processing")
 async def procesar_formulario(request: Request, datos: datos_formulario):
-    datos_guardar = datos.dict()  # Obtener los datos como un diccionario
+    #print("hhhhh")
+    datos_guardar = datos.model_dump()  # Obtener los datos como un diccionario
     formulario.insert_one(datos_guardar)
     return templates.TemplateResponse("exito.html", {"request": request})
