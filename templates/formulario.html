@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario3Contraloría</title>
+    <title>Formulario Contraloría</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     <style>
@@ -81,7 +81,10 @@
           </div>
           <div class="col-md-4">
             <label for="municipio" class="form-label">Municipio </label>
-            <input name="municipio" type="text" class="form-control" id="municipio" required />
+            <select name="municipio" class="form-select" id="municipio" required>
+              <option selected disabled value="">Seleccione su municipio...</option>
+              <option value="chacao">Chacao</option>
+            </select>
           </div>
           <div class="col-md-4">
             <label for="nombre_organismo" class="form-label">Nombre del Organismo u Ente adscrito donde labora </label>
@@ -257,7 +260,7 @@
         </div>
         <div class="row">
           <div class="col-md-4">
-           
+            
             <label for="cantidad_forochats_se" class="form-label">Cantidad de foro chats realizados (S.E.)</label>
             <input name="cantidad_forochats_se" type="text" class="form-control" id="cantidad_forochats_se" required />
           </div>
@@ -303,12 +306,10 @@
               <input name="nombre_ministerio_ap" type="text" class="form-control" id="nombre_ministerio_ap" required />
           </div>
           <div class="col-md-4">
-              <br>
               <label for="cantidad_actividades_ap" class="form-label">Describa cantidad y de que trataron las actividades realizadas a la Administración Pública (A.P.)</label>
               <input name="cantidad_actividades_ap" type="text" class="form-control" id="cantidad_actividades_ap" required />
           </div>
           <div class="col-md-4">
-              <br>
               <br>
               <label for="cantidad_talleres_ap" class="form-label">Cantidad de talleres realizados (A.P.)</label>
               <input name="cantidad_talleres_ap" type="text" class="form-control" id="cantidad_talleres_ap" required />
@@ -340,7 +341,7 @@
         </div>
         <br>
         <div class="col-12">
-            <button type = "button" class = "btn btn-secondary" onclick="nextsection(7)">Anterior</button>
+            <button type = "button" class = "btn btn-secondary" onclick="nextsection(6)">Anterior</button>
             <button class="btn btn-primary" type="button" onclick="validarYEnviar()">Enviar Información</button>
         </div>
       </div>
